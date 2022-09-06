@@ -1,7 +1,32 @@
 # Altium Mono
-## A TrueType font family to create better-looking copper layer in Altium Designer
+## An (unofficial) TrueType font family based on JetBrains Mono to create better-looking copper layer in Altium Designer
 
-### This is project is still a working progress
+### How to use this repository
+This repo is currently WIP. If you happen to understand what I am doing without me explaining, you can:
+- Install the font from the latest build folder in your Windows machine
+- Use Altium Mono Regular for Copper Layer (Text height = 1mm)
+- Use Altium Mono Bold for Solder Mask Layer (Text height = 1mm)
+- Use Altium Mono Extrabold (Inverted) for Copper layer (Text height = 1mm)
+- Adjust rules to allow 0 mm text-polygon clearance; Allow Short circuit between text and all nets.
+- Please use query language to create and manage specific rules.
+- Please limit its use to one-off projects to avoid long-term maintenance headache.
+- Write a poem on your piece of PCB and get it fabricated.
+
+### What I am currently working on 
+- Optimizing this Github repo (README page, links and pictures, Release page, License, etc.)
+- Writing a Python script for automating some of the FontForge methods explained below
+- Convert more fonts!
+- Adding commonly used glyphs (*e.g.* UL, RoHS, Open Source Hardware, diodes) to the TrueType font package, and ship a copy-paste list for it. 
+- Guidelines to embed Logos & other vector graphics in a custom font based on an arbitrary existing font.
+- Test print something and release photos!
+- More Altium tips, tricks, and hacks.
+
+### Other Notes
+- I am assuming typical trace/width 5mil/5mil (OSHPark) and 3.5mil/3.5mil (JLCPCB)
+- Solder Mask Expansion to be 0.05mm
+- Minimum silkscreen width to be 6mil
+- Typical text height 1mm, 1.27mm, 2.54mm, 5.08mm
+
 
 ### Motivation
 - Tired of using Adobe Illustrator to handle "texts" as graphics work for each board
@@ -40,13 +65,6 @@
 
 
 
-### How to use this repository
-Have not got time to set up the release page. However:
-- Install the font from the latest build folder
-- Use Altium Mono for Copper Layer
-- Use Altium Mono Bold for Solder Mask Layer
-- Use Altium Mono Extrabold (Inverted) for Copper layer
-- Currently, this font works best for 1mm text height, 0.05mm mask expansion, and 3.5mil trace/clearance capabilities.
 
 ### Known Limitations
 - Have to generate and install new typeface and install for each new typeface/fab capabilities
