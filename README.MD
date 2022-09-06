@@ -13,8 +13,8 @@ This repo is currently WIP. If you happen to understand what I am doing without 
 - Write a poem on your piece of PCB and get it fabricated.
 
 ### Some Pictures
-[Demonstration 2D](/Images/Demo1.jpg)
-[Demonstration 3D](/Images/Demo1-1.jpg)
+![Demonstration 2D](/Images/Demo1.jpg)
+![Demonstration 3D](/Images/Demo1-1.jpg)
 
 ### What I am currently working on 
 - Optimizing this Github repo (README page, links and pictures, Release page, License, etc.)
