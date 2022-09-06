@@ -40,7 +40,22 @@ Have not got time to set up the release page. However:
 - Use Altium Mono for Copper Layer
 - Use Altium Mono Bold for Solder Mask Layer
 - Use Altium Mono Extrabold (Inverted) for Copper layer
+- Currently, this font works best for 1mm text height, 0.05mm mask expansion, and 3.5mil trace/clearance capabilities.
+
+### Known Limitations
+- Have to generate and install new typeface and install for each new typeface/fab capabilities
+- If sharing the project to multiple machines, typeface have to be installed on each.
+- Must follow best practice and save the typeface in dedicated project folder.
+- Ligature and kerning 
+### Related Projects
+My own:
+
+- Will slowly release more PCB / Altium related stuff to Github
+
+Public:
+- [Scalable Graphics in the PCB Editor](https://forum.live.altium.com/#/posts/61899) by Darren Moore 
+ 
 
 ### Licenses 
 Altium Mono was created based on JetBrains Mono, a monospace technical typeface for developers.
-There is no restrictions on your use of the content in this repository. However, I as the author accept no liability. 
+There is no restrictions on your use of the content in this repository. However, I as the author accept no liability. (TODO: )
