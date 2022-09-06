@@ -34,16 +34,17 @@ This repo is currently WIP. If you happen to understand what I am doing without 
 
 ### Motivation
 - Tired of using Adobe Illustrator to handle "texts" as graphics work for each board
-- Explore a solution that could potentially work across many projects (and benefit others, too)
+- Explore a solution that could potentially work across many projects (and other people's projects, of course)
 - Better typography for PCB as a print medium (to an extent, after all functionality, cost of production and engineering requirements override graphical preferences)
+- Create a decent-looking PCB business card as a show-off.
 
 ### Observation 
 #### "1 mm" Text will never be 1 mm, why?
 - Without access to the source implementation, I can only observe the behavior as a user. 
-- Good news: actual text height scales linearly with speicifed text height. 
+- Good news: actual text height scales linearly with speicifed text height.
 - f(L,H), where L is pixel length in TrueType source file, and H, specified text height in Altium Designer.
 #### What kind of correlation is out there?
-- Conclusion: For TrueType Fonts with em size of 1000 the text height is (L / 1000 * 0.7553 * H) mm, where L is pixel length in the 1000x1000 em box, and H is the input of text height in Altium Designer.
+- Conclusion: For TrueType Fonts with em size of 1000 the text height is (L / 1000 * 0.7553 * H) mm, where L is pixel length in the 1000x1000 em box, and H is the input of text height in Altium Designer. This formular works for H > 0.125mm, which seems to be the minimum textbox height in Altium.
 - This conclusion is, obviously, a brute force engineering solution to approach the problem. It works, but would be better if fully understand how Altium handles TrueType fonts under the hood.
 ### Solving this Problem with Altium's Default Stroke Font
 #### Advantages
@@ -55,11 +56,14 @@ This repo is currently WIP. If you happen to understand what I am doing without 
 ### Solving this Problem with Adobe Illustrator
 #### Advantages
 - Content is saved as an Altium primitive (regions) and thus portable across systems
+- True "polygon pour" look around typographical elements.
 #### Disadvantages
 - Requires subscription of Illustrator (TODO: repeat the same method in Inkscape)
-- Grainy texture, usually not a big issue when you get the board fabricated
-- Too much steps, and have to repeat the same step for each project
-- Not possible to dynamically change the content
+- Grainy texture, usually not a big issue when you get the board fabricated. But think about it, Altium supports importing images at maximum 1200 dpi. 1200 may sound like a lot, but it is only 47 pixels per 1 mm. 
+- High fidelity graphics costs compile time during polygon repour.
+- A lot of calculations if a standard approach is not establish *a priori*. 
+- Repetitive task.
+- Not possible to dynamically change the content. To accomodate any change, you have to do it again.
 
 ### Solving this Problem with Custom TrueType Fonts
 #### What is TrueType Font, Exactly?
