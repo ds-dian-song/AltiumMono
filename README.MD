@@ -4,12 +4,18 @@
 ### This is project is still a working progress
 
 ### Motivation
-
+- Tired of using Adobe Illustrator to handle "texts" as graphics work for each board
+- Explore a solution that could potentially work across many projects (and benefit others, too)
+- Better typography for PCB as a print medium (to an extent, after all functionality, cost of production and engineering requirements override graphical preferences)
 
 ### Observation 
 #### "1 mm" Text will never be 1 mm, why?
+- Without access to the source implementation, I can only observe the behavior as a user. 
+- Good news: actual text height scales linearly with speicifed text height. 
+- f(L,H), where L is pixel length in TrueType source file, and H, specified text height in Altium Designer.
 #### What kind of correlation is out there?
 - Conclusion: For TrueType Fonts with em size of 1000 the text height is (L / 1000 * 0.7553 * H) mm, where L is pixel length in the 1000x1000 em box, and H is the input of text height in Altium Designer.
+- This conclusion is, obviously, a brute force engineering solution to approach the problem. It works, but would be better if fully understand how Altium handles TrueType fonts under the hood.
 ### Solving this Problem with Altium's Default Stroke Font
 #### Advantages
 - Looks great and very compatible with Altium Designer's way of handling texts/primitives
@@ -54,7 +60,11 @@ My own:
 
 Public:
 - [Scalable Graphics in the PCB Editor](https://forum.live.altium.com/#/posts/61899) by Darren Moore 
- 
+
+### Typography Tutorial and References
+- Coursera stuff
+- Youtube stuff
+- My working guidelines & conventions
 
 ### Licenses 
 Altium Mono was created based on JetBrains Mono, a monospace technical typeface for developers.
