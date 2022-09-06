@@ -3,10 +3,10 @@
 
 ### How to use this repository
 This repo is currently WIP. If you happen to understand what I am doing without me explaining, you can:
-- Install the font from the latest build folder in your Windows machine
+- Install on your Windows machine the fonts from the latest build folder.
 - Use Altium Mono Regular for Copper Layer (Text height = 1mm)
 - Use Altium Mono Bold for Solder Mask Layer (Text height = 1mm)
-- Use Altium Mono Extrabold (Inverted) for Copper layer (Text height = 1mm)
+- Use Altium Mono Extrabold for Copper layer (Text height = 1mm, inverted)
 - Adjust rules to allow 0 mm text-polygon clearance; Allow Short circuit between text and all nets.
 - Please use query language to create and manage specific rules.
 - Please limit its use to one-off projects to avoid long-term maintenance headache.
