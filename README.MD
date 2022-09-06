@@ -11,8 +11,10 @@ This repo is currently WIP. If you happen to understand what I am doing without 
 - Please use query language to create and manage specific rules.
 - Please limit its use to one-off projects to avoid long-term maintenance headache.
 - Write a poem on your piece of PCB and get it fabricated.
+- To uninstall the font, use shortcut "WIN + S" to open search, and then find and enter "font settings". You will need to click "uninstall" three times for each variation. 
+- I would love your feedback! 
 
-### Some Pictures
+### Some Primitive Demo Pictures
 ![Demonstration 2D](/Images/Demo1.jpg)
 ![Demonstration 3D](/Images/Demo1-1.jpg)
 
@@ -92,6 +94,9 @@ Public:
 - Youtube stuff
 - My working guidelines & conventions
 
-### Licenses 
-Altium Mono was created based on JetBrains Mono, a monospace technical typeface for developers.
-There is no restrictions on your use of the content in this repository. However, I as the author accept no liability. (TODO: )
+### Licenses & Intellectual Properties
+Altium Mono was created based on JetBrains Mono, a monospace technical typeface engineered for developers. JetBrains Mono is available under the SIL Open Font License 1.1 license, and can be used free of charge, for both commercial and non-commercial purposes. The credit is yours, JetBrains. 
+
+There is no restrictions on your use of the content in this repository. However, I as the author accept no liability.
+
+Altium as a trademark belongs to its respective owner. This project is not affiliated with or endorsed by this entity. For IP related issues please contact me directly. 
