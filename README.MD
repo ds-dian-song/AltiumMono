@@ -63,7 +63,7 @@ This repo is currently WIP. If you happen to understand what I am doing without 
 - Requires subscription of Illustrator (TODO: repeat the same method in Inkscape)
 - Grainy texture, usually not a big issue when you get the board fabricated. But think about it, Altium supports importing images at maximum 1200 dpi. 1200 may sound like a lot, but it is only 47 pixels per 1 mm. 
 - High fidelity graphics costs compile time during polygon repour.
-- A lot of calculations if a standard approach is not establish *a priori*. 
+- A lot of calculations if a standard approach is not established *a priori*. 
 - Repetitive task.
 - Not possible to dynamically change the content. To accomodate any change, you have to do it again.
 
@@ -79,7 +79,7 @@ This repo is currently WIP. If you happen to understand what I am doing without 
 ### Known Limitations
 - Have to generate and install new typeface and install for each new typeface/fab capabilities
 - If sharing the project to multiple machines, typeface have to be installed on each.
-- Must follow best practice and save the typeface in dedicated project folder.
+- Must follow best practice and save the typeface in dedicated project folder, and make note of it, to avoid jeprodizing maintainability.
 - Ligature and kerning 
 ### Related Projects
 My own:
