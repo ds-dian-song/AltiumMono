@@ -1,5 +1,5 @@
 # Altium Mono
-## An (unofficial) TrueType font family based on JetBrains Mono to create better-looking copper layer in Altium Designer
+## An (unofficial) TrueType font family based on JetBrains Mono to create better-looking text on copper layer in Altium Designer
 
 ### How to use this repository
 This repo is currently WIP. If you happen to understand what I am doing without me explaining, you can:
@@ -12,6 +12,7 @@ This repo is currently WIP. If you happen to understand what I am doing without 
 - Please limit its use to one-off projects to avoid long-term maintenance headache.
 - Write a poem on your piece of PCB and get it fabricated.
 - To uninstall the font, use shortcut "WIN + S" to open search, and then find and enter "font settings". You will need to click "uninstall" three times for each variation. 
+- If something unexpected happened, try disable "embed TrueType Font" & "automatically replace unavailable font" in Altium systems settings, and save project. 
 - I would love your feedback! 
 
 ### Some Primitive Demo Pictures
@@ -69,12 +70,18 @@ This repo is currently WIP. If you happen to understand what I am doing without 
 
 ### Solving this Problem with Custom TrueType Fonts
 #### What is TrueType Font, Exactly?
+Putting some keywords here, but will populate content soon:
+- en, em, and em box
+- ascend line & descend line
+- Monospace font, and why JetBrains Mono
+- Ligature and kerning
 #### Advantages
+- Once three layers are aligned correctly, edit all three boxes at once
+- does not affect repour time
+- Say bye to grainy texts (at least in 3D view, ultimately grainy or not depends on the fabricator)
 #### Disadvantages
-
-
-
-
+- maintainability issues
+- portability issues
 
 ### Known Limitations
 - Have to generate and install new typeface and install for each new typeface/fab capabilities
@@ -87,11 +94,12 @@ My own:
 - Will slowly release more PCB / Altium related stuff to Github
 
 Public:
-- [Scalable Graphics in the PCB Editor](https://forum.live.altium.com/#/posts/61899) by Darren Moore 
+- [Scalable Graphics in the PCB Editor](https://forum.live.altium.com/#/posts/61899) by Darren Moore in year 2006
 
 ### Typography Tutorial and References
 - Coursera stuff
 - Youtube stuff
+- Books
 - My working guidelines & conventions
 
 ### Licenses & Intellectual Properties
