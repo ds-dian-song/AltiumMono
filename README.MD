@@ -40,7 +40,7 @@ This repo and its documentation is currently WIP. If you happen to understand wh
 ### Motivation
 - Tired of using Adobe Illustrator to handle "texts" as graphics work for each board
 - Explore a solution that could potentially work across many projects (and other people's projects, of course)
-- Better typography for PCB as a print medium (to an extent. After all: functionality, cost of production and engineering requirements override graphical preferences). There are still some wiggle room for personal touch outside functionality requirements.
+- Better typography for PCB as a print medium (to an extent. After all: functionality, cost of production and engineering requirements override graphical preferences). There are still wiggle room for personal touch outside fulfilling functionality requirements. Otherwise why spending time on 45 degree angle or even arcs? Electrons don't really care (in MHz range)? 
 - Create a decent-looking PCB business card as a show-off.
 
 ### Observation 
