@@ -7,9 +7,9 @@ This repo is currently WIP. If you happen to understand what I am doing without 
 - Use Altium Mono Regular for Copper Layer (Text height = 1mm)
 - Use Altium Mono Bold for Solder Mask Layer (Text height = 1mm)
 - Use Altium Mono Extrabold for Copper layer (Text height = 1mm, inverted)
-- Adjust rules to allow 0 mm text-polygon clearance; Allow Short circuit between text and all nets.
-- Please use query language to create and manage specific rules.
-- Please limit its use to one-off projects to avoid long-term maintenance headache.
+- Adjust rules to allow 0 mm text-polygon clearance; Allow short circuit between text and touching net (most likely GND).
+- The above rule may undermine DRC's capability of detecting troubles. Therefore, please use query language to create and manage specific rules.
+- Please limit its use to one-off projects to avoid long-term maintenance headache, considering everything may change at this point.
 - Write a poem on your piece of PCB and get it fabricated.
 - To uninstall the font, use shortcut "WIN + S" to open search, and then find and enter "font settings". You will need to click "uninstall" three times for each variation. 
 - If something unexpected happened, try disable "embed TrueType Font" & "automatically replace unavailable font" in Altium systems settings, and save project. 
@@ -103,8 +103,8 @@ Public:
 - My working guidelines & conventions
 
 ### Licenses & Intellectual Properties
-Altium Mono was created based on JetBrains Mono, a monospace technical typeface engineered for developers. JetBrains Mono is available under the SIL Open Font License 1.1 license, and can be used free of charge, for both commercial and non-commercial purposes. The credit is yours, JetBrains. 
+Altium Mono was created based on JetBrains Mono. As a matter of fact, Altium Mono Regular is identical to JetBrains Mono 2.242. JetBrains Mono is a monospace technical typeface engineered for developers.It contains some nice features a technical person would be excited to see. JetBrains Mono is available under the SIL Open Font License 1.1 license, and can be used free of charge, for both commercial and non-commercial purposes. *The credit is yours, JetBrains.* 
 
-There is no restrictions on your use of the content in this repository. However, I as the author accept no liability.
+There is no restrictions on your use of the content in this repository. However, I as the author assume no liability.
 
-Altium as a trademark belongs to its respective owner. This project is not affiliated with or endorsed by this entity. For IP related issues please contact me directly. 
+Altium as a trademark belongs to its respective owner. This project is not affiliated with or endorsed by this entity. The name of this typeface is chosen because of relevance. For IP related issues please connect with me directly. 
