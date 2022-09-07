@@ -12,7 +12,7 @@ This repo and its documentation is currently WIP. If you happen to understand wh
 - Adjust rules to allow 0 mm text-polygon clearance; Allow short circuit between text and touching net (most likely GND).
 - The above rule may undermine DRC's capability of detecting troubles. Therefore, please use query language to create and manage specific rules.
 - Please limit its use to one-off projects to avoid long-term maintenance headache, considering everything may change at this point.
-- Write a poem on your piece of PCB and get it fabricated.
+- Write a poem on your piece of PCB and get it fabricated (with ENIG coating)
 - To uninstall the font, use shortcut "WIN + S" to open search, and then find and enter "font settings". You will need to click "uninstall" three times for each variation. 
 - If something unexpected happened, try disable "embed TrueType Font" & "automatically replace unavailable font" in Altium systems settings, and save project. 
 - I would love your feedback! 
