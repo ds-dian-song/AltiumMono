@@ -45,30 +45,36 @@ This repo and its documentation is currently WIP. If you happen to understand wh
 
 ### Observation 
 #### "1 mm" Text will never be 1 mm, why?
-- Without access to the source implementation, I can only observe the behavior as a user. 
+- Without access to the source implementation, I can only observe system behavior as a user. 
 - Good news: actual text height scales linearly with speicifed text height.
-- f(L,H), where L is pixel length in TrueType source file, and H, specified text height in Altium Designer.
+- Conjecture: the text height is a function of **L**, the pixel length in its respective TrueType source file, and **H**, the user-specified text height in Altium Designer, f(L, H).
 #### What kind of correlation is out there?
 - Conclusion: For TrueType Fonts with em size of 1000 (very common choice of em height, actually) the text height is (L / 1000 * 0.7553 * H) mm, where L is pixel length in the 1000x1000 em box, and H is the input of text height in Altium Designer. This formular works for H > 0.125mm, which seems to be the minimum textbox height in Altium. BTW, the default TrueType "Arial" has em box size of 2048, which makes it behave differently. However, linearity still applies.
 - This conclusion is, obviously, a brute force engineering solution to approach the problem. It works, but would be better if fully understand how Altium handles TrueType fonts under the hood.
 ### Solving this Problem with Altium's Default Stroke Font
+- Copper, 0.5mm height, 3.5mil stroke
+- Mask, 0.5mm height, 7.437mil stroke
+- over lap two text boxes, you get your masked txt in a rectangular box.
 #### Advantages
 - Looks great and very compatible with Altium Designer's way of handling texts/primitives
+- Measures almost true to the size 
+- Portable across machines and software versions.
 #### Disadvantages
-- Limited choice of typefaces
+- Altium introduces this typeface as "a simple vector font designed for pen plotting and vector photo plotting", and indeed to many people, this typeface has a 80s look.
+- No alternatives
 - Limited special symbols
 - It can be better
-### Solving this Problem with Adobe Illustrator
+### Solving this Problem with Adobe Illustrator/Inkscape
 #### Advantages
 - Content is saved as an Altium primitive (regions) and thus portable across systems
 - True "polygon pour" look around typographical elements.
 #### Disadvantages
-- Requires subscription of Illustrator (TODO: repeat the same method in Inkscape)
+- Using Illustrator requires subscription of Illustrator (TODO: repeat the same method in Inkscape)
 - Grainy texture, usually not a big issue when you get the board fabricated. But think about it, Altium supports importing images at maximum 1200 dpi. 1200 may sound like a lot, but it is only 47 pixels per 1 mm. 
 - High fidelity graphics costs compile time during polygon repour.
 - A lot of calculations if a standard approach is not established *a priori*. 
-- Repetitive task.
-- Not possible to dynamically change the content. To accomodate any change, you have to do it again.
+- Repetitive. Good or bad depending you are paid by the hour or not ;)
+- Not possible to dynamically change content. To accomodate any change, you have to do it again, which becomes pure labor sometimes.
 
 ### Solving this Problem with Custom TrueType Fonts
 #### What is TrueType Font, Exactly?
