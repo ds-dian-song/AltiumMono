@@ -2,11 +2,13 @@
 ## An (unofficial) TrueType font family based on JetBrains Mono to create better-looking text on copper layer in Altium Designer
 
 ### How to use this repository
-This repo is currently WIP. If you happen to understand what I am doing without me explaining, you can:
+This repo and its documentation is currently WIP. If you happen to understand what I am doing without me being pedantic about it, you can:
+- Know that some features are still broken (for instance, inverting "i" will create undesirable result)
 - Install on your Windows machine the fonts from the latest build folder.
-- Use Altium Mono Regular for Copper Layer (Text height = 1mm)
-- Use Altium Mono Bold for Solder Mask Layer (Text height = 1mm)
-- Use Altium Mono Extrabold for Copper layer (Text height = 1mm, inverted)
+- Apply `Altium Mono Regular` for a string object on the Copper Layer (Text height = 1mm), this is the "text"
+- Apply `Altium Mono Bold` for a string object on the Solder Mask Layer (Text height = 1mm), this is the "mask expansion"
+- Apply `Altium Mono Extrabold` for a string object on the Copper layer (Text height = 1mm, inverted), this is the "polygon pour"
+- Observe that text to mask expansion is 0.05mm, and text to pour distance > 3.5mil.
 - Adjust rules to allow 0 mm text-polygon clearance; Allow short circuit between text and touching net (most likely GND).
 - The above rule may undermine DRC's capability of detecting troubles. Therefore, please use query language to create and manage specific rules.
 - Please limit its use to one-off projects to avoid long-term maintenance headache, considering everything may change at this point.
@@ -47,7 +49,7 @@ This repo is currently WIP. If you happen to understand what I am doing without 
 - Good news: actual text height scales linearly with speicifed text height.
 - f(L,H), where L is pixel length in TrueType source file, and H, specified text height in Altium Designer.
 #### What kind of correlation is out there?
-- Conclusion: For TrueType Fonts with em size of 1000 the text height is (L / 1000 * 0.7553 * H) mm, where L is pixel length in the 1000x1000 em box, and H is the input of text height in Altium Designer. This formular works for H > 0.125mm, which seems to be the minimum textbox height in Altium.
+- Conclusion: For TrueType Fonts with em size of 1000 (very common choice of em height, actually) the text height is (L / 1000 * 0.7553 * H) mm, where L is pixel length in the 1000x1000 em box, and H is the input of text height in Altium Designer. This formular works for H > 0.125mm, which seems to be the minimum textbox height in Altium. BTW, the default TrueType "Arial" has em box size of 2048, which makes it behave differently. However, linearity still applies.
 - This conclusion is, obviously, a brute force engineering solution to approach the problem. It works, but would be better if fully understand how Altium handles TrueType fonts under the hood.
 ### Solving this Problem with Altium's Default Stroke Font
 #### Advantages
