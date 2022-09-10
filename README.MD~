@@ -21,31 +21,6 @@ This repo and its documentation is currently WIP. If you happen to understand wh
 ![Demonstration 2D](/Images/Demo1.jpg)
 ![Demonstration 3D](/Images/Demo1-1.jpg)
 
-### Naming Conventions
-
-Regular: exposed text
-
-Bold: Solder Mask opening, typically 0.05mm offset from regular
-
-Extra Bold: To be inverted, typically 5 mil offset from regular
-
-OL: outline text, use it inverted, usually contains 5mil offset from the center text
-
-Based on JetBrains Mono:
-
-AltiumMono-JetBrains-Regular
-AltiumMono-JetBrains-Bold
-AltiumMono-JetBrains-ExtraBold
-
-Based on TT Lakes Neue Outlined
-AltiumMono-LakesOL-Regular
-AltiumMono-LakesOL-Bold
-
-TODO:
-- FF DIN 
-- Subset of Materials Icon
-- etc etc.
-
 ### What I am currently working on 
 - Optimizing this Github repo (README page, links and pictures, Release page, License, etc.)
 - Writing a Python script for automating some of the FontForge methods explained below
