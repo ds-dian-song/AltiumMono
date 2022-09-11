@@ -1,0 +1,3 @@
+[submodule "external/DSEG"]
+	path = external/DSEG
+	url = https://github.com/keshikan/DSEG.git
